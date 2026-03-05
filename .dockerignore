@@ -1,0 +1,19 @@
+# Ignore the virtual environment (it's huge and won't work inside Linux anyway)
+venv/
+env/
+.env
+
+# Ignore Python bytecode (speeds up builds)
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore git metadata
+.git
+.gitignore
+
+# Ignore IDE settings
+.vscode/
+.idea/
+

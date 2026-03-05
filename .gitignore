@@ -1,0 +1,20 @@
+# Ignore Environment Variables (CRITICAL)
+venv/
+env/
+.venv/
+.env/
+bin/
+lib/
+include/
+.env
+.flaskenv
+*.env
+
+# Ignore Virtual Environment
+venv/
+env/
+
+# Ignore Python Cache
+**/__pycache__/
+*.pyc
+
