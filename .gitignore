@@ -18,3 +18,6 @@ env/
 **/__pycache__/
 *.pyc
 
+# Ignore IDE settings
+.vscode/
+.idea/
