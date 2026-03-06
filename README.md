@@ -15,7 +15,7 @@ This project demonstrates:
 # Project Structure
 
 ```
-college_management/
+college management/
 │
 ├── database/
 │   └── college_management.py
