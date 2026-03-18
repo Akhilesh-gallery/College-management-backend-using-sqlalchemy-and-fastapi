@@ -1,6 +1,7 @@
 from pydantic import BaseModel,Field,field_validator, computed_field
 from typing import Annotated,Literal,ClassVar,Optional
 from database.college_management import get_st_value
+from fastapi import HTTPException
 
 class UserInput(BaseModel):
     _dept_counter : ClassVar[dict[int,int]] = get_st_value()
@@ -15,6 +16,14 @@ class UserInput(BaseModel):
     @classmethod
     def validate_names(cls,name):
         return name.upper()
+    
+    @field_validator('st_name')
+    @classmethod
+    def name_check(cls,name):
+        if name.isalpha():
+            return name
+        else:
+            raise HTTPException(400,detail={"error: ": "Name should be in string"})
     
     @computed_field
     @property
